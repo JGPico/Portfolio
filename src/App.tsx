@@ -1,10 +1,10 @@
-import './App.css'
+import ContentBlock from "./components/ContentBlock"
 
 function App() {
 
   return (
     <>
-      <h1>Hi</h1>
+      <ContentBlock>A collection of words meant to be displayed</ContentBlock>
     </>
   )
 }
