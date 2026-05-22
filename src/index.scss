@@ -1,0 +1,15 @@
+@use './components/component css/variables' as *;
+
+body {
+    background-color: $body-background;
+    color: $default-text-color;
+}
+
+.row {
+    @include flex-row;
+    padding-left: 5%;
+}
+
+.column {
+    @include flex-column
+}

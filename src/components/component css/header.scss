@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+.header {
+    @include flex-column;
+    max-width: 50%;
+
+}

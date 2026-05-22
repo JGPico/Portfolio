@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react"
-import "./component css/contentBlock.scss"
+import "./component css/contentSub.scss"
 
 type ContentProps = {
 
@@ -8,7 +8,11 @@ type ContentProps = {
 export default function ContentBlock({ ...props }: ContentProps) {
     return (
         <>
-            <p {...props} className="contentBlock"></p>
+            <div className="contentSubWrapper">
+
+                <p {...props} ></p>
+
+            </div>
         </>
     )
-}
+} 

@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react"
+import "./component css/contentSub.scss"
 
 type ContentSubProps = {
     date: string,
@@ -8,10 +9,12 @@ type ContentSubProps = {
 export default function ContentSub({ date, title, ...props }: ContentSubProps) {
     return (
         <div>
-            <h1>{date}</h1>
             <div className="contentSubWrapper">
-                <h1>{title}</h1>
-                <p {...props}></p>
+                <h1>{date}</h1>
+                <div className="contentSubParagraphWrapper">
+                    <h1>{title}</h1>
+                    <p {...props}></p>
+                </div>
             </div>
         </div>
     )

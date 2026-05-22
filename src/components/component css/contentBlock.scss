@@ -1,9 +1,11 @@
-@use 'variables';
+@use 'variables' as *;
 
 .contentBlock {
     padding: 1em;
     margin: 1em;
-    background-color: variables.$bg-gray;
+    background-color: $bg-gray;
     text-align: center;
     border-radius: 25px;
+    justify-content: right;
+    align-items: center;
 }
