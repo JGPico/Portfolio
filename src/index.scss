@@ -5,11 +5,11 @@ body {
     color: $default-text-color;
 }
 
-.row {
+.siteWrapper {
     @include flex-row;
-    padding-left: 5%;
+    justify-content: space-around;
 }
 
-.column {
+.conentWrapper {
     @include flex-column
 }

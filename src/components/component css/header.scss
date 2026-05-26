@@ -2,6 +2,16 @@
 
 .header {
     @include flex-column;
-    max-width: 50%;
+    max-width: 25%;
 
+    h1 {
+        font-size: 3em;
+        width: 100%;
+        text-align: left;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: left;
+    }
 }
