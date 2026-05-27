@@ -4,6 +4,7 @@
     @include flex-column;
     align-items: flex-start;
     max-width: 25%;
+    padding-top: min(3em, 8%);
     padding-right: min(8em, 8%);
 
     h1 {

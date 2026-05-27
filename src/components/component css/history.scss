@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
-.contentSubWrapper {
-    @include flex-row;
+.historyWrapper {
+    @include flex-column;
     @include default-box;
     max-width: 36rem; // same cap for both; tweak as you like
     box-sizing: border-box;
@@ -10,7 +10,7 @@
     justify-content: right;
 }
 
-.contentSubParagraphWrapper {
+.historySubParagraphWrapper {
     flex: 1;
     min-width: 0; // required for text wrap inside flex row
     padding: 1em;

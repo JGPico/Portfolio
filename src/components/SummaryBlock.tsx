@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react"
-import "./component css/contentSub.scss"
+import "./component css/history.scss"
 import "./component css/summaryBlock.scss"
 
 type SummaryBlockProps = {
