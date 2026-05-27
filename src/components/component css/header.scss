@@ -2,16 +2,29 @@
 
 .header {
     @include flex-column;
+    align-items: flex-start;
     max-width: 25%;
+    padding-right: min(8em, 8%);
 
     h1 {
         font-size: 3em;
         width: 100%;
         text-align: left;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     h2 {
+        font-size: 1.55em;
         width: 100%;
+        text-align: left;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.1em;
+        width: 50%;
         text-align: left;
     }
 }

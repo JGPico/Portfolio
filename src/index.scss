@@ -7,7 +7,7 @@ body {
 
 .siteWrapper {
     @include flex-row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .conentWrapper {

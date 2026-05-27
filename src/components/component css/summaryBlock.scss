@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.summaryBlock {
+    @include default-box;
+    text-align: left;
+    max-width: 36rem; // same cap for both; tweak as you like
+    box-sizing: border-box;
+
+    p {
+        text-align: left;
+    }
+}

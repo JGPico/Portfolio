@@ -1,14 +1,15 @@
 import type { ComponentProps } from "react"
 import "./component css/contentSub.scss"
+import "./component css/summaryBlock.scss"
 
-type ContentProps = {
+type SummaryBlockProps = {
 
 } & ComponentProps<"p">
 
-export default function ContentBlock({ ...props }: ContentProps) {
+export default function SummaryBlock({ ...props }: SummaryBlockProps) {
     return (
         <>
-            <div className="contentSubWrapper">
+            <div className="summaryBlock">
 
                 <p {...props} ></p>
 

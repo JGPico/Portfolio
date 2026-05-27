@@ -3,8 +3,9 @@ import "./component css/header.scss"
 export default function Header() {
     return (
         <div className="header">
-            <h1>cheese</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt natus quisquam beatae esse omnis quis et, neque recusandae animi error provident aspernatur dignissimos voluptatum enim qui voluptates eaque. Velit, cumque.</p>
+            <h1>James Pico</h1>
+            <h2>Fullstack Engineer</h2>
+            <p>I build applications on the web with a focus on security.</p>
         </div>
     )
 }
