@@ -26,7 +26,7 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
                     return (
                         <div key={item.id}>
                             <div className="historySubDateWrapper">
-                                <h3 style={{ marginTop: '2em' }}>{item.dateRange}</h3>
+                                <h4>{item.dateRange}</h4>
                                 <div className="historySubParagraphWrapper">
                                     <h3>{item.title}</h3>
                                     <ul>{item.description.map(desc => { return <li>{desc}</li> })}</ul>

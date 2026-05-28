@@ -20,12 +20,15 @@
     padding: 1em;
     padding-top: 0.1em;
     margin: 1em;
+    margin-top: 0;
     background-color: blue;
     text-align: center;
     border-radius: 25px;
 
-    p {
-        overflow-wrap: break-word;
-        word-break: break-word;
+    li {
+        padding: 0;
+        padding-bottom: 0.5em;
+        list-style-type: disc;
+        text-align: left;
     }
 }
