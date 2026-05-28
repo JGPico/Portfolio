@@ -10,10 +10,15 @@
     justify-content: right;
 }
 
+.historySubDateWrapper {
+    @include flex-row;
+}
+
 .historySubParagraphWrapper {
     flex: 1;
     min-width: 0; // required for text wrap inside flex row
     padding: 1em;
+    padding-top: 0.1em;
     margin: 1em;
     background-color: blue;
     text-align: center;

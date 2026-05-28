@@ -26,11 +26,12 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
                 {workHistoryItems.map(item => {
                     return (
                         <>
-                            <h1>{item.dateRange}</h1>
-                            <div className="historySubParagraphWrapper">
-                                <h2>{item.title}</h2>
-                                <p>{item.employer}</p>
-                                <p>work in description format</p>
+                            <div className="historySubDateWrapper">
+                                <h3 style={{ marginTop: '2em' }}>{item.dateRange}</h3>
+                                <div className="historySubParagraphWrapper">
+                                    <h3>{item.title}</h3>
+                                    <p>work in description format</p>
+                                </div>
                             </div>
                         </>
                     )

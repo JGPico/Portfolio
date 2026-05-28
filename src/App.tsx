@@ -7,7 +7,7 @@ function App() {
 
   const workHistory = [
     {
-      "id": "1", "dateRange": "Jan 2021 - Aug 2025", "title": "Software Engineer", "employer": "Deloitte & Touche",
+      "id": "1", "dateRange": "Jan 2021 - Aug 2025", "title": "Software Engineer - Deloitte & Touche",
       "description": `
         •	Led implementation of Kafka oriented data management system, streamlining data processing and improving data accuracy
         •	Developed tools for data collection from Windows and Linux operating systems, 
@@ -16,7 +16,7 @@ function App() {
       "relevantSkills": ["Kafka", "Splunk", "Elastic", "Docker"]
     },
     {
-      "id": "2", "dateRange": "Aug 2020 - Jan 2021", "title": "Software Engineer", "employer": "Root9B",
+      "id": "2", "dateRange": "Aug 2020 - Jan 2021", "title": "Software Engineer - Root9B",
       "description": `
         •	Designed RESTful API using clojure language, Developed and maintained API security
         •	Collaborate with UI/UX team to build responsive Front-end in React`,
@@ -33,7 +33,7 @@ function App() {
             Specializing in front-end development with React and scalable back-end solutions using NodeJS and PostgreSQL.
             Adept at building responsive user interfaces, optimizing database performance, and integrating RESTful APIs.
             Proven ability to collaborate with cross-functional teams and agile environments.</SummaryBlock>
-          <HistoryList workHistoryItems={workHistory}>Potatoes are among the greatest of inventions</HistoryList>
+          <HistoryList workHistoryItems={workHistory}></HistoryList>
         </div>
       </div>
     </>
