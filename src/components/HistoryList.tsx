@@ -5,9 +5,8 @@ type workHistoryItem = {
     id: string,
     dateRange: string,
     title: string,
-    employer: string,
-    description: string,
-    relevantSkills: string
+    description: string[],
+    relevantSkills: string[]
 }
 
 type HistoryListProps = {
@@ -25,15 +24,15 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
             <div className="historyWrapper">
                 {workHistoryItems.map(item => {
                     return (
-                        <>
+                        <div key={item.id}>
                             <div className="historySubDateWrapper">
                                 <h3 style={{ marginTop: '2em' }}>{item.dateRange}</h3>
                                 <div className="historySubParagraphWrapper">
                                     <h3>{item.title}</h3>
-                                    <p>work in description format</p>
+                                    <ul>{item.description.map(desc => { return <li>{desc}</li> })}</ul>
                                 </div>
                             </div>
-                        </>
+                        </div>
                     )
                 })}
             </div>
