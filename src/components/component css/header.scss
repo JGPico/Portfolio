@@ -8,7 +8,7 @@
     padding-right: min(8em, 8%);
 
     h1 {
-        font-size: 3em;
+
         width: 100%;
         text-align: left;
         padding-bottom: 0;
@@ -27,5 +27,12 @@
         font-size: 1.1em;
         width: 50%;
         text-align: left;
+    }
+}
+
+@media (width <=960px) {
+    .header {
+        max-width: 100%;
+        margin-left: 12px;
     }
 }

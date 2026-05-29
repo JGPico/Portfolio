@@ -14,3 +14,13 @@ body {
 .contentWrapper {
     @include flex-column
 }
+
+h1 {
+    font-size: clamp(1.8rem, 7vw + 1rem, 3rem);
+}
+
+@media (width <=960px) {
+    .siteWrapper {
+        @include flex-column;
+    }
+}

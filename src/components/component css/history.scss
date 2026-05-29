@@ -3,7 +3,7 @@
 .historyWrapper {
     @include flex-column;
     @include default-box;
-    max-width: 36rem; // same cap for both; tweak as you like
+    max-width: 36rem; // same cap for both; 
     box-sizing: border-box;
     min-width: 0; // lets flex children shrink below content size
     text-align: center;
@@ -30,5 +30,11 @@
         padding-bottom: 0.5em;
         list-style-type: disc;
         text-align: left;
+    }
+}
+
+@media (width <=960px) {
+    .header {
+        max-width: 100%;
     }
 }

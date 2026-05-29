@@ -19,23 +19,25 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
         return <p>Work history is not present</p>
     }
 
+    let subKey = 0;
+
     return (
-        <div>
-            <div className="historyWrapper">
-                {workHistoryItems.map(item => {
-                    return (
-                        <div key={item.id}>
-                            <div className="historySubDateWrapper">
-                                <h4>{item.dateRange}</h4>
-                                <div className="historySubParagraphWrapper">
-                                    <h3>{item.title}</h3>
-                                    <ul>{item.description.map(desc => { return <li>{desc}</li> })}</ul>
-                                </div>
+
+        <div className="historyWrapper">
+            {workHistoryItems.map(item => {
+                return (
+                    <div key={item.id}>
+                        <div className="historySubDateWrapper">
+                            <h4>{item.dateRange}</h4>
+                            <div className="historySubParagraphWrapper">
+                                <h3>{item.title}</h3>
+                                <ul>{item.description.map(desc => { subKey++; return <li key={subKey}>{desc}</li> })}</ul>
                             </div>
                         </div>
-                    )
-                })}
-            </div>
+                    </div>
+                )
+            })}
         </div>
+
     )
 }
