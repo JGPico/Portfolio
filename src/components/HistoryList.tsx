@@ -19,8 +19,6 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
         return <p>Work history is not present</p>
     }
 
-    let subKey = 0;
-
     return (
 
         <div className="historyWrapper">
@@ -31,7 +29,7 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
                             <h4>{item.dateRange}</h4>
                             <div className="historySubParagraphWrapper">
                                 <h3>{item.title}</h3>
-                                <ul>{item.description.map(desc => { subKey++; return <li key={subKey}>{desc}</li> })}</ul>
+                                <ul>{item.description.map(desc => { return <li key={crypto.randomUUID()}>{desc}</li> })}</ul>
                             </div>
                         </div>
                     </div>
