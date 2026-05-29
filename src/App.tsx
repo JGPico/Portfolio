@@ -1,6 +1,7 @@
 import SummaryBlock from "./components/SummaryBlock"
 import HistoryList from "./components/HistoryList"
 import Header from "./components/Header"
+import ProjectList from "./components/ProjectsList"
 import "./index.scss"
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <div className="contentWrapper">
           <SummaryBlock>{summary}</SummaryBlock>
           <HistoryList workHistoryItems={workHistory}></HistoryList>
+          <ProjectList projectItems={[]}></ProjectList>
         </div>
       </div>
     </>

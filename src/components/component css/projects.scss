@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+.projectWrapper {
+    @include flex-column;
+    @include default-box;
+    max-width: 36rem; // same cap for both; 
+    box-sizing: border-box;
+    min-width: 0; // lets flex children shrink below content size
+    text-align: center;
+    justify-content: right;
+}
+
+.projectSubDateWrapper {
+    @include flex-row;
+}
+
+.projectSubParagraphWrapper {
+    flex: 1;
+    min-width: 0; // required for text wrap inside flex row
+    padding: 1em;
+    padding-top: 0.1em;
+    margin: 1em;
+    margin-top: 0;
+    background-color: blue;
+    text-align: center;
+    border-radius: 25px;
+
+    li {
+        padding: 0;
+        padding-bottom: 0.5em;
+        list-style-type: disc;
+        text-align: left;
+    }
+}
+
+@media (width <=590px) {
+    .projectSubDateWrapper {
+        @include flex-column;
+    }
+}
