@@ -2,6 +2,8 @@ import SummaryBlock from "./components/SummaryBlock"
 import HistoryList from "./components/HistoryList"
 import Header from "./components/Header"
 import ProjectList from "./components/ProjectsList"
+import Space from "./assets/Space.png"
+import Japanese from "./assets/Japanese.png"
 import "./index.scss"
 
 function App() {
@@ -32,12 +34,12 @@ function App() {
 
   const projects = [
     {
-      "id": "1", "screenGrab": "temp", "title": "Japanese Conjugator",
+      "id": "1", "screenGrab": Japanese, "title": "Japanese Conjugator",
       "description": "Use this app to visually see patterns in the conjugation of Japanese verbs",
       "link": "find a url to put here"
     },
     {
-      "id": "2", "screenGrab": "picture here", "title": "Nasa Space Pic of the Day",
+      "id": "2", "screenGrab": Space, "title": "Nasa Space Pic of the Day",
       "description": "See the latest cool images Nasa is releasing. Consumes Nasa's API.",
       "link": "https://space-pics.vercel.app/"
     }

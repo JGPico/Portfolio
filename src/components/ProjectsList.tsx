@@ -1,6 +1,11 @@
 import type { ComponentProps } from "react"
 import "./component css/projects.scss"
 
+type ImageProp = {
+    src: string;
+    alt?: string;
+}
+
 type projectItem = {
     id: string,
     screenGrab: string,
@@ -26,7 +31,7 @@ export default function ProjectList({ projectItems, ...props }: ProjectListProps
                 return (
                     <div key={item.id}>
                         <div className="projectSubDateWrapper">
-                            <span>{item.screenGrab}</span>
+                            <img src={item.screenGrab} alt={"An image of the project"}></img>
                             <div className="projectSubParagraphWrapper">
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>

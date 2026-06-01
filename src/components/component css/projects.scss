@@ -13,9 +13,11 @@
 .projectSubDateWrapper {
     @include flex-row;
 
-    span {
+    img {
         margin-top: 1.5rem;
-        width: 25%;
+        width: 30%;
+        height: 90px;
+        border-radius: 5%;
     }
 
 }
@@ -44,5 +46,21 @@
 @media (width <=590px) {
     .projectSubDateWrapper {
         @include flex-column;
+
+        img {
+            order: 1;
+            margin-left: 1rem;
+            padding-left: 1rem;
+            align-self: flex-start;
+            margin-top: 5px;
+            margin-bottom: 1rem;
+            padding-top: 0;
+            width: 40%;
+            height: 8rem;
+        }
+    }
+
+    .projectSubParagraphWrapper {
+        margin-bottom: 0;
     }
 }
