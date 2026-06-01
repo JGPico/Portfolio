@@ -6,6 +6,7 @@ type projectItem = {
     screenGrab: string,
     title: string,
     description: string,
+    link: string,
 }
 
 type ProjectListProps = {
@@ -25,7 +26,7 @@ export default function ProjectList({ projectItems, ...props }: ProjectListProps
                 return (
                     <div key={item.id}>
                         <div className="projectSubDateWrapper">
-                            <img src="../public/icons.svg"></img>
+                            <span>{item.screenGrab}</span>
                             <div className="projectSubParagraphWrapper">
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>

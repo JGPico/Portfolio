@@ -30,6 +30,19 @@ function App() {
     },
   ]
 
+  const projects = [
+    {
+      "id": "1", "screenGrab": "temp", "title": "Japanese Conjugator",
+      "description": "Use this app to visually see patterns in the conjugation of Japanese verbs",
+      "link": "find a url to put here"
+    },
+    {
+      "id": "2", "screenGrab": "picture here", "title": "Nasa Space Pic of the Day",
+      "description": "See the latest cool images Nasa is releasing. Consumes Nasa's API.",
+      "link": "https://space-pics.vercel.app/"
+    }
+  ]
+
   return (
     <>
       <div className="siteWrapper">
@@ -37,7 +50,7 @@ function App() {
         <div className="contentWrapper">
           <SummaryBlock>{summary}</SummaryBlock>
           <HistoryList workHistoryItems={workHistory}></HistoryList>
-          <ProjectList projectItems={[]}></ProjectList>
+          <ProjectList projectItems={projects}></ProjectList>
         </div>
       </div>
     </>

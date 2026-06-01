@@ -12,6 +12,12 @@
 
 .projectSubDateWrapper {
     @include flex-row;
+
+    span {
+        margin-top: 1.5rem;
+        width: 25%;
+    }
+
 }
 
 .projectSubParagraphWrapper {
@@ -25,6 +31,7 @@
     text-align: center;
     border-radius: 25px;
 
+
     li {
         padding: 0;
         padding-bottom: 0.5em;
@@ -32,6 +39,7 @@
         text-align: left;
     }
 }
+
 
 @media (width <=590px) {
     .projectSubDateWrapper {
