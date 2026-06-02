@@ -16,6 +16,13 @@ body {
     @include flex-column
 }
 
+.headNavWrapper {
+    top: 0;
+    height: 100%;
+    position: sticky;
+    width: auto;
+}
+
 h1 {
     font-size: clamp(1.8rem, 7vw + 1rem, 3rem);
 }

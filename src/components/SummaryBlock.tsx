@@ -1,15 +1,15 @@
-import type { ComponentProps } from "react"
+import type { ComponentProps, RefObject } from "react"
 import "./component css/history.scss"
 import "./component css/summaryBlock.scss"
 
 type SummaryBlockProps = {
-
+    aboutSection: RefObject<HTMLDivElement | null>,
 } & ComponentProps<"p">
 
-export default function SummaryBlock({ ...props }: SummaryBlockProps) {
+export default function SummaryBlock({ aboutSection, ...props }: SummaryBlockProps) {
     return (
         <>
-            <div className="summaryBlock">
+            <div ref={aboutSection} className="summaryBlock">
 
                 <p {...props} ></p>
 

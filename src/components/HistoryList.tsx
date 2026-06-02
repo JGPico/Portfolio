@@ -1,4 +1,4 @@
-import type { ComponentProps } from "react"
+import type { RefObject } from "react"
 import "./component css/history.scss"
 
 type workHistoryItem = {
@@ -10,10 +10,11 @@ type workHistoryItem = {
 }
 
 type HistoryListProps = {
-    workHistoryItems: workHistoryItem[]
-} & ComponentProps<"p">
+    workHistoryItems: workHistoryItem[],
+    historySection: RefObject<HTMLDivElement | null>,
+}
 
-export default function HistoryList({ workHistoryItems, ...props }: HistoryListProps) {
+export default function HistoryList({ workHistoryItems, historySection }: HistoryListProps) {
 
     if (workHistoryItems.length === 0) {
         return <p>Work history is not present</p>
@@ -21,7 +22,7 @@ export default function HistoryList({ workHistoryItems, ...props }: HistoryListP
 
     return (
 
-        <div className="historyWrapper">
+        <div ref={historySection} className="historyWrapper">
             {workHistoryItems.map(item => {
                 return (
                     <div key={item.id}>

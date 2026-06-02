@@ -1,10 +1,13 @@
 import SummaryBlock from "./components/SummaryBlock"
 import HistoryList from "./components/HistoryList"
 import Header from "./components/Header"
+import NavBar from "./components/NavBar"
 import ProjectList from "./components/ProjectsList"
 import Space from "./assets/Space.png"
 import Japanese from "./assets/Japanese.png"
 import "./index.scss"
+import { useRef } from "react"
+import FunImage from "./components/FunImage"
 
 function App() {
 
@@ -45,14 +48,25 @@ function App() {
     }
   ]
 
+  const aboutSection = useRef<HTMLDivElement>(null)
+  const historySection = useRef<HTMLDivElement>(null)
+  const projectSection = useRef<HTMLDivElement>(null)
+
   return (
     <>
       <div className="siteWrapper">
-        <Header></Header>
+        <div className="headNavWrapper">
+          <Header></Header>
+          <NavBar
+            aboutSection={aboutSection}
+            historySection={historySection}
+            projectSection={projectSection}></NavBar>
+        </div>
         <div className="contentWrapper">
-          <SummaryBlock>{summary}</SummaryBlock>
-          <HistoryList workHistoryItems={workHistory}></HistoryList>
-          <ProjectList projectItems={projects}></ProjectList>
+          <SummaryBlock aboutSection={aboutSection}>{summary}</SummaryBlock>
+          <HistoryList historySection={historySection} workHistoryItems={workHistory}></HistoryList>
+          <ProjectList projectSection={projectSection} projectItems={projects}></ProjectList>
+          <FunImage></FunImage>
         </div>
       </div>
     </>

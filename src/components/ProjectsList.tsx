@@ -1,10 +1,5 @@
-import type { ComponentProps } from "react"
+import type { RefObject } from "react"
 import "./component css/projects.scss"
-
-type ImageProp = {
-    src: string;
-    alt?: string;
-}
 
 type projectItem = {
     id: string,
@@ -15,10 +10,11 @@ type projectItem = {
 }
 
 type ProjectListProps = {
-    projectItems: projectItem[]
-} & ComponentProps<"p">
+    projectItems: projectItem[],
+    projectSection: RefObject<HTMLDivElement | null>,
+}
 
-export default function ProjectList({ projectItems, ...props }: ProjectListProps) {
+export default function ProjectList({ projectItems, projectSection }: ProjectListProps) {
 
     if (projectItems.length === 0) {
         return <p>Project list not present</p>
@@ -26,7 +22,7 @@ export default function ProjectList({ projectItems, ...props }: ProjectListProps
 
     return (
 
-        <div className="projectWrapper">
+        <div ref={projectSection} className="projectWrapper">
             {projectItems.map(item => {
                 return (
                     <div key={item.id}>
