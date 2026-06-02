@@ -17,9 +17,10 @@ body {
 }
 
 .headNavWrapper {
-    top: 0;
-    height: 100%;
+    // top: 0;
+    // height: 100%;
     position: sticky;
+    justify-content: flex-start;
     width: auto;
 }
 
@@ -30,5 +31,16 @@ h1 {
 @media (width <=960px) {
     .siteWrapper {
         @include flex-column;
+    }
+
+    .headNavWrapper {
+        top: auto;
+        height: auto;
+        position: auto;
+
+        ul {
+            visibility: hidden;
+            height: 0;
+        }
     }
 }
