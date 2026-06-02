@@ -1,4 +1,5 @@
 import { type RefObject } from 'react';
+import "./component css/navBar.scss"
 
 type NavBarProps = {
     aboutSection: RefObject<HTMLDivElement | null>,
@@ -15,10 +16,10 @@ export default function NavBar({ aboutSection, historySection, projectSection }:
     return (
         <div>
             <nav>
-                <ul>
-                    <button type="button" onClick={() => scrollToSection(aboutSection)}>About</button>
-                    <button type="button" onClick={() => scrollToSection(historySection)}>Work History</button>
-                    <button type="button" onClick={() => scrollToSection(projectSection)}>Projects</button>
+                <ul className="navList">
+                    <li onClick={() => scrollToSection(aboutSection)}>About</li>
+                    <li onClick={() => scrollToSection(historySection)}>Work History</li>
+                    <li onClick={() => scrollToSection(projectSection)}>Projects</li>
                 </ul>
             </nav>
         </div>
