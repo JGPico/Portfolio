@@ -5,11 +5,35 @@
     padding-left: 0;
 
     li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         list-style-type: none;
+        margin-bottom: 6px;
+        cursor: pointer;
+    }
 
-        &:hover {
-            cursor: pointer;
-        }
+    li::before {
+        content: '';
+        display: inline-block;
+
+        // set max grow length
+        width: 50px;
+        height: 2px;
+        background-color: aqua;
+
+        // create gap between line and text
+        margin-right: 20px;
+
+        // start scaled down to 20%
+        transform: scaleX(0.2);
+
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    li:hover::before {
+        transform: scaleX(1);
     }
 
 }
