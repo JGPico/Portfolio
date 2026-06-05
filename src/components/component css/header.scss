@@ -30,6 +30,12 @@
     }
 }
 
+@media (width <=1140px) {
+    .header {
+        margin-left: 16px;
+    }
+}
+
 @media (width <=960px) {
     .header {
         max-width: 100%;

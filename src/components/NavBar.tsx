@@ -14,7 +14,7 @@ export default function NavBar({ aboutSection, historySection, projectSection }:
     }
 
     return (
-        <div>
+        <div className="navBox">
             <nav>
                 <ul className="navList">
                     <li onClick={() => scrollToSection(aboutSection)}>About</li>

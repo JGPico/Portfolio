@@ -1,6 +1,8 @@
 $body-background: hsl(246, 50%, 23%);
 $default-text-color: hsl(24, 100%, 96%);
 $bg-gray: hsl(0, 0%, 50%);
+$signature-border: hsl(240, 100%, 50%);
+$signature-fill: hsl(0, 0%, 100%);
 
 @mixin flex-row {
     display: flex;

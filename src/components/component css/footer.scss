@@ -1,17 +1,29 @@
+@use 'variables' as *;
+
 .signatureBox {
-    background-color: gray;
-    align-self: stretch;
-    justify-self: end;
+    display: flex;
+    background-color: $bg-gray;
+    align-self: flex-end;
+    justify-self: flex-start;
+    width: 75%;
 }
 
 .sig {
-    align-self: flex-end;
-    justify-self: flex-end;
-    stroke: blue;
-    fill: white;
+    align-self: flex-start;
+    justify-self: flex-start;
+    stroke: $signature-border;
+    fill: $signature-fill;
     stroke-width: 3px;
     stroke-dasharray: 1800;
     animation: effectText 5s ease-in-out;
+
+    svg {
+        width: 75%;
+
+        text {
+            justify-self: flex-start;
+        }
+    }
 }
 
 @keyframes effectText {
@@ -21,12 +33,12 @@
     }
 
     to {
-        fill: white;
+        fill: $signature-fill;
         stroke-dashoffset: 0;
     }
 }
 
-@media (width <=960px) {
+@media (width <=1140px) {
     .signatureBox {
         visibility: hidden;
         height: 0;

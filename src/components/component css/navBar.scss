@@ -1,3 +1,9 @@
+@use 'variables' as *;
+
+.navBox {
+    width: 75%;
+}
+
 .navList {
     background-color: rgb(2, 46, 46);
     border-radius: 5%;
@@ -35,4 +41,11 @@
         transform: scaleX(1);
     }
 
+}
+
+@media (width <=1140px) {
+    .navBox {
+        visibility: hidden;
+        height: 0;
+    }
 }

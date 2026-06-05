@@ -47,7 +47,7 @@ export default function Footer() {
                     y="155"
                     textAnchor="middle"
                     fontFamily="'Great Vibes', cursive"
-                    fontSize="110"
+                    fontSize="90"
                     fill="url(#inkGrad)"
                     filter="url(#inkBleed)"
                     letterSpacing="2"
