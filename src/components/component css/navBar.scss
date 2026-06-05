@@ -43,7 +43,7 @@
 
 }
 
-@media (width <=1140px) {
+@media (width <=$media-med) {
     .navBox {
         visibility: hidden;
         height: 0;

@@ -43,7 +43,7 @@
 }
 
 
-@media (width <=590px) {
+@media (width <=$media-small) {
     .projectSubDateWrapper {
         @include flex-column;
 

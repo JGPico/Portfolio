@@ -30,13 +30,13 @@
     }
 }
 
-@media (width <=1140px) {
+@media (width <=$media-big) {
     .header {
         margin-left: 16px;
     }
 }
 
-@media (width <=960px) {
+@media (width <=$media-med) {
     .header {
         max-width: 100%;
         margin-left: 12px;

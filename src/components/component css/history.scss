@@ -33,7 +33,7 @@
     }
 }
 
-@media (width <=590px) {
+@media (width <=$media-small) {
     .historySubDateWrapper {
         @include flex-column;
     }
