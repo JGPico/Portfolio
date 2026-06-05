@@ -1,0 +1,34 @@
+.signatureBox {
+    background-color: gray;
+    align-self: stretch;
+    justify-self: end;
+}
+
+.sig {
+    align-self: flex-end;
+    justify-self: flex-end;
+    stroke: blue;
+    fill: white;
+    stroke-width: 3px;
+    stroke-dasharray: 1800;
+    animation: effectText 5s ease-in-out;
+}
+
+@keyframes effectText {
+    from {
+        fill: transparent;
+        stroke-dashoffset: 1800;
+    }
+
+    to {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (width <=960px) {
+    .signatureBox {
+        visibility: hidden;
+        height: 0;
+    }
+}

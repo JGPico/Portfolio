@@ -20,6 +20,7 @@ body {
     top: 1rem;
     position: sticky;
     width: auto;
+    height: 100vh;
 }
 
 h1 {
@@ -40,5 +41,11 @@ h1 {
             visibility: hidden;
             height: 0;
         }
+    }
+}
+
+@media (width <=580px) {
+    .headNavWrapper {
+        width: 100%;
     }
 }

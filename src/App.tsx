@@ -8,6 +8,7 @@ import Japanese from "./assets/Japanese.png"
 import "./index.scss"
 import { useRef } from "react"
 import FunImage from "./components/FunImage"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -61,6 +62,7 @@ function App() {
             aboutSection={aboutSection}
             historySection={historySection}
             projectSection={projectSection}></NavBar>
+          <Footer></Footer>
         </div>
         <div className="contentWrapper">
           <SummaryBlock aboutSection={aboutSection}>{summary}</SummaryBlock>
