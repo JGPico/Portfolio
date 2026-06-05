@@ -5,8 +5,6 @@
 }
 
 .navList {
-    background-color: rgb(2, 46, 46);
-    border-radius: 5%;
     margin-left: 0;
     padding-left: 0;
 
@@ -25,7 +23,7 @@
         // set max grow length
         width: 50px;
         height: 2px;
-        background-color: aqua;
+        background-color: $bullet;
 
         // create gap between line and text
         margin-right: 20px;

@@ -1,14 +1,101 @@
 @use 'variables' as *;
 
+@mixin default-bird {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    top: -40px;
+    right: 70px;
+    opacity: 0;
+}
+
 .funBox {
+    @include flex-row;
     @include default-box;
     max-width: 36rem;
     background-color: $bg-gray;
     box-sizing: border-box;
 }
 
+.birdNIcon {
+    position: relative;
+}
+
 .icons {
     width: 8rem;
     height: 8rem;
     cursor: pointer;
+}
+
+.bird {
+    @include default-bird;
+}
+
+.mirrorBird {
+    @include default-bird;
+    right: -70px;
+}
+
+.body {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background: brown;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.head {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: brown;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform-origin: 20% 80%;
+}
+
+.birdNIcon:hover .bird {
+    .head {
+        animation: peckHead 0.2s ease-in-out 5;
+    }
+
+    opacity: 1;
+    animation: peck 0.2s ease-in-out 5;
+}
+
+.birdNIcon:hover .mirrorBird {
+    .head {
+        animation: peckHead 0.2s ease-in-out 5;
+    }
+
+    opacity: 1;
+    animation: peck 0.2s ease-in-out 5;
+}
+
+@keyframes peck {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+
+@keyframes peckHead {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(60deg) translate(8px, 12px);
+    }
 }
