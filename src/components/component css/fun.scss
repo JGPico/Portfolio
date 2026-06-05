@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+.funBox {
+    @include default-box;
+    max-width: 36rem;
+    background-color: $bg-gray;
+    box-sizing: border-box;
+}
+
+.icons {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+}
